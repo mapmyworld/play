@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>Map My World Play</title>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image" href="img/mmw.png">
+
+		<!-- <base href="/dev/" > -->
+		<base href="https://mapmyworld.github.io" >
+
+		<link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.2.1/dist/maplibre-gl.css' />
+		<script src='https://unpkg.com/maplibre-gl@3.2.1/dist/maplibre-gl.js'></script>
+		<script src='/maplibre-ext/layer.js'></script>
+		<script src='/maplibre-ext/layer.esri.js'></script>
+		<script src="https://unpkg.com/pmtiles@4.3.0/dist/pmtiles.js"></script>
+		<script src="https://unpkg.com/protomaps-themes-base@4.5.0/dist/protomaps-themes-base.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.min.js" type="text/javascript"></script>
+		<link href="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.css" rel="stylesheet">
+		<script src="https://unpkg.com/three@0.147.0/examples/js/math/OBB.js"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+
+		<link rel='stylesheet' href='css/index.css' />
+		<link rel='stylesheet' href='css/control.css' />
+		<link rel='stylesheet' href='css/overlay.css' />
+		<link rel='stylesheet' href='css/component.css' />
+
+	</head>
+
+	<body>
+
+		<div id="map"></div>
+		
+		<div id="mmw-overlay-container">
+			<div class="top left mmw-overlay">
+				<div class="mmw-overlay-group" id="header" onclick="mmw._common.goHome()">
+					<img class="logo" src="img/mmw.png" title="Map My World"></img> <h3>MAP MY WORLD</h3>
+				</div>
+			</div>
+			<div id="xrvis" style="display: none;">
+				<video id="webcam-preview" playsinline></video>
+			</div>
+		</div>
+		
+		
+		<!-- <script type="module" src='index.js'></script>
+		<script defer src='/dist/play.js'></script> -->
+		
+		<script src='mmw.js'></script>
+		<script src='index.js'></script>
+		<script defer src='/play/play.js'></script>
+
+	</body>
+
+</html>
